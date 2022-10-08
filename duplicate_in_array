@@ -1,0 +1,14 @@
+https://www.codingninjas.com/codestudio/problems/duplicate-in-array_893397
+
+int findDuplicate(vector<int> &arr) 
+{
+    int ans=0;
+    //XOR ing all array elements
+    for(int i=0;i<arr.size();i++)
+        ans=ans^arr[i];
+    
+    // XOR ing the numbers except the repeated number
+    for(int i=0;i<arr.size();i++)
+        ans=ans^i;
+    return ans;
+}
