@@ -4,7 +4,7 @@ https://www.codingninjas.com/codestudio/problems/intersection-of-2-arrays_108214
 #include <bits/stdc++.h> 
 vector<int> findArrayIntersection(vector<int> &arr1, int n, vector<int> &arr2, int m)
 {
-	// Write your code here.
+
     vector<int>intersect;
     int i=0,j=0;
     while(i<n && j<m)
