@@ -1,0 +1,42 @@
+https://leetcode.com/problems/capitalize-the-title/description/                     (<-- QUESTION)
+
+https://leetcode.com/problems/capitalize-the-title/submissions/869902722/            (<-- SOLUTION)
+
+class Solution {
+    public String capitalizeTitle(String title) 
+    {
+        int beg=0,i;
+        String word="",nw="",newtitle="";
+        char ch;
+        for( i=0;i<title.length();i++)
+        {
+            ch=title.charAt(i);
+            if(ch==' '|| i==title.length()-1)
+            {
+                word=title.substring(beg,i+1);
+                word=word.toLowerCase();
+                beg=i+1;
+            
+            
+            if(word.length()>3 && i!=title.length()-1)
+            {
+                
+                nw=""+Character.toUpperCase(word.charAt(0))+word.substring(1,word.length());
+                newtitle=newtitle+""+nw;
+            }
+            else if(word.length()>2 && i==title.length()-1)
+            {
+                nw=""+Character.toUpperCase(word.charAt(0))+word.substring(1,word.length());
+                newtitle=newtitle+""+nw;
+            }
+            else
+                newtitle=newtitle+""+word;
+            }
+            
+        }
+
+        return newtitle;
+
+            
+    }
+}
