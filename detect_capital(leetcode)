@@ -1,0 +1,30 @@
+https://leetcode.com/problems/detect-capital/description/             (<-- QUESTION)
+
+https://leetcode.com/problems/detect-capital/submissions/869845164/     (<-- SOLUTION)
+
+class Solution {
+    public boolean detectCapitalUse(String word) 
+    {
+        int f=0,c=0;
+        char ch;
+        ch=word.charAt(0);
+            if(ch>='A' && ch<='Z')
+                f=1;
+        for(int i=1;i<word.length();i++)
+        {
+            ch=word.charAt(i);
+              if(ch>='A' && ch<='Z')
+                c++;
+        }
+
+        if(f==0 && c==0)
+            return true;
+        else if(f==1 && c==0)
+            return true;
+        else if(f+c == word.length())
+            return true;
+        else
+            return false;
+
+    }
+}
